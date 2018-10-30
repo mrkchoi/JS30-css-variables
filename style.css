@@ -2,13 +2,43 @@
       misc styles, nothing to do with CSS variables
     */
 
+    .main {
+        margin-top: 10rem;
+    }
+    :root {
+        --spacing: 10px;
+        --blur: 10px;
+        --base: #ffc600;
+        --color: #0F0F0F;
+    }
+
+    .hl {
+        color: var(--base);
+    }
+
+    h2 {
+        font-weight: 800;
+        /* margin-top: 10rem; */
+    }
+
+    .controls {
+        display: flex;
+        justify-content: center;
+    }
+    
+    img {
+        padding: var(--spacing);
+        background-color: var(--base);
+        filter: blur(var(--blur));
+        max-width: 500px;
+    }
+
     body {
         text-align: center;
-        background: #193549;
-        color: white;
+        color: var(--color);
         font-family: 'helvetica neue', sans-serif;
         font-weight: 100;
-        font-size: 50px;
+        overflow: hidden;
       }
   
       .controls {
@@ -17,4 +47,9 @@
   
       input {
         width: 100px;
+        margin-left: 1rem;
+      }
+
+      input:not(:last-of-type) {
+        margin-right: 4rem;
       }
